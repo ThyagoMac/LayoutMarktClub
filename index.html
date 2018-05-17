@@ -8,20 +8,98 @@
     <title>Layout</title>
 </head>
 <body>
-    <div class="logo-central">
+    <header>
 
-    </div>
-    <div class="menu">
-        <div class="menu-int">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Vídeos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+		<img class="logo-central" src="images/logoCentralMarktClub.jpg" alt="marktclub logo" title="MarktClub">
+        
+        <div class="menu">
+            <nav class="menu-int">
+                <ul>
+                    <li><a class="cor-primaria" href="#">Home</a></li>
+                    <li><a class="cor-primaria" href="#noticias">Notícias</a></li>
+                    <li><a class="cor-primaria" href="#videos">Vídeos</a></li>
+                    <li><a class="cor-primaria" href="#sobre">Sobre</a></li>
+                    <li><a class="cor-primaria" href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+    <section class="corpo">
+        <div class="banner-principal"></div>
+        <article class="noticias">
+            <h2 class="titulo cor-primaria"><a name="noticias">Notícias</a></h2>
+            <figure class="foto-noticia">
+				<img src="images/noticia.jpg">
+				<figcaption>
+					<h3 class="cor-primaria">Uma notícia muito interessante.</h3>
+					<p class="cor-secundaria">Este é um acontecimento muito interessante que irá mudar sua vida.</p>
+				</figcaption>
+            </figure>
+            <figure class="foto-noticia">
+				<img src="images/noticia.jpg">
+				<figcaption>
+					<h3 class="cor-primaria">Outra notícia muito interessante.</h3>
+					<p class="cor-secundaria">Este é outro acontecimento muito interessante que irá mudar sua vida para melhor definitivamente você precisa ler isso!</p>
+				</figcaption>
+            </figure>
+            <figure class="foto-noticia">
+				<img src="images/noticia.jpg">
+				<figcaption>
+					<h3 class="cor-primaria">Mais uma notícia muito interessante.</h3>
+					<p class="cor-secundaria">Este é um acontecimento muito interessante que irá mudar sua vida.</p>
+				</figcaption>
+            </figure>
+            <figure class="foto-noticia">
+				<img src="images/noticia.jpg">
+				<figcaption>
+					<h3 class="cor-primaria">Essa é de arrasar os corações!</h3>
+					<p class="cor-secundaria">Este é um acontecimento muito interessante que irá mudar sua vida.</p>
+				</figcaption>
+            </figure>
+            <figure class="foto-noticia">
+				<img src="images/noticia.jpg">
+				<figcaption>
+					<h3 class="cor-primaria">Uma notícia com um título muito longo. O mais longo de todos os títulos que encontrará aqui nos exemplos feitos por esse site, mas continua muito interessante.</h3>
+					<p class="cor-secundaria">A descrição da notícia mais longa de todas as notícias. Realmente são vários acontecimentos em um só e vale a pena ler todo o conteúdo que se segue para que você fique por dentro do que está acontecendo no mundo inteiro. Imperdível.</p>
+				</figcaption>
+            </figure>
+            <figure class="foto-noticia">
+				<img src="images/noticia.jpg">
+				<figcaption>
+					<h3 class="cor-primaria">Ultima notícia.</h3>
+					<p class="cor-secundaria">Este é um acontecimento muito recente que mudou o rumo da história mundial.</p>
+				</figcaption>
+			</figure>
+        </article>
+        <div class="videos">
+            <h2 class="titulo cor-primaria"><a name="videos">Vídeos</a></h2>
+            <div class="video"> <!-- Exemplo de video usando tags HTML -->
+                <figure>
+                    <video poster="images/logoCentralMarktClub.jpg" controls>
+                        <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+                        <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                        <source src="http://www.w3schools.com/html/mov_bbb.webm" type="video/webm" />
+                        <p>Desculpe, mas não foi possivel carregar o video.</p>
+                    </video>
+                </figure>
+            </div>
+            <div class="video"> <!-- Exemplo de vid pelo youtube iframe -->
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/HwCAvR2lCZw?rel=0" frameborder="0" allowfullscreen></iframe>
+                </figure>
+            </div>
+            <div class="video">
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/L7Qthjz-vy0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </figure>
+            </div>
+        </div>
+        <div class="contato">
+            <h2 class="titulo cor-primaria"><a name="contato">Contato</a></h2>
+        </div>
+       
+    </section>
+    <footer class="rodape"></footer>
     
 </body>
 </html>

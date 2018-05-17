@@ -1,37 +1,57 @@
-body {
+body, figure {
     background-color: rgb(246, 246, 246);
     margin: 0;
     padding: 0;
     font-size: 15px;
+    font-family: sans-serif;
+}
+
+figure { 
+    width: 100%; 
+    min-width: 320px; 
+    margin:0 auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.titulo {
+    border-bottom: 1px solid rgb(235, 122, 61);
+}
+
+.cor-primaria {
+    color: rgb(235, 122, 61);
+}
+
+.cor-secundaria {
     color: rgb(102, 102, 102);
 }
 
 .menu {
-    border-top: 1px solid rgb(206, 107, 47);
-    border-bottom: 1px solid rgb(206, 107, 47);
+    border-top: 1px solid rgb(235, 122, 61);
+    border-bottom: 1px solid rgb(235, 122, 61);
     height: 40px;
     line-height: 40px;
 }
 
 .menu-int {
     width: 100%;
-    max-width: 1040px;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
 }
 
 .menu-int li {
     display: inline;
-    margin-left: 11px;
-    margin-right: 11px;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
     font-size: 15px;
-
 }
 
 .menu-int li a {
-    color: rgb(206, 107, 47);
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: bold;
 }
 
@@ -42,8 +62,53 @@ body {
 }
 
 .logo-central {
-    height: 105px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+/*  height: 105px;
     background-image: url("../images/logoCentralMarktClub.jpg");
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.corpo {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.banner-principal {
+    margin: 15px 0px;
+    height: 400px;
+    background-image: url("../images/bannerMarktClub.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.foto-noticia img {
+    width:100%;
+}
+.foto-noticia p {
+    font-weight: bold;
+}
+
+.video-principal{
+
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 25px;
+    height: 0;
+    margin:10px auto;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
