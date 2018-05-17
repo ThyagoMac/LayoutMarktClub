@@ -94,12 +94,56 @@
                 </figure>
             </div>
         </div>
-        <div class="contato">
-            <h2 class="titulo cor-primaria"><a name="contato">Contato</a></h2>
-        </div>
-       
+        <fieldset class="contato">
+            <legend><h2 class="cor-primaria"><a name="contato">Contato</a></h2></legend>
+            <form method="post" id="f-contato" action="mailto:email@gmail.com">
+
+                <div class="row">
+                    <div class="col-25">
+                        <label class="cor-secundaria" for="fnome">Nome</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fnome" name="formnome" placeholder="Digite Seu Nome">
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label class="cor-secundaria" for="ftelefone">Telefone</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" id="ftelefone" name="formtelefone" placeholder="Apenas Números">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label class="cor-secundaria" for="femail">E-Mail</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="femail" name="formemail" placeholder="exemplo@marktclub.com.br">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label class="cor-secundaria" for="subject">Mensagem</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Escreva algo para nós..." style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+            </form>
+        </fieldset>
     </section>
-    <footer class="rodape"></footer>
+
+    <footer id="rodape">
+        <p>Telefone: (XX) XXXXX-XXXX <br>
+            E-Mail: exemplo@marktclub.com.br <br>
+            Copyright &copy; 2018 - by Thyago Mac <br>
+		<a href="#" target="_blank">Facebook</a> |
+		<a href="#" target="_blank">Twitter</a></p>
+	</footer>
     
 </body>
 </html>

@@ -2,7 +2,7 @@ body, figure {
     background-color: rgb(246, 246, 246);
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 1em;
     font-family: sans-serif;
 }
 
@@ -47,10 +47,9 @@ video {
     display: inline;
     margin-left: 0.25em;
     margin-right: 0.25em;
-    font-size: 15px;
 }
 
-.menu-int li a {
+.menu-int li a, #rodape a {
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,7 +64,7 @@ video {
     display: block;
     margin-left: auto;
     margin-right: auto;
-/*  height: 105px;
+/*  height: 105px;                   >>---> caso logo fosse utilizado como background.
     background-image: url("../images/logoCentralMarktClub.jpg");
     background-repeat: no-repeat;
     background-position: center; */
@@ -88,8 +87,13 @@ video {
 .foto-noticia img {
     width:100%;
 }
-.foto-noticia p {
+
+.foto-noticia p, #f-contato label {
     font-weight: bold;
+}
+.foto-noticia p {
+    margin-bottom: 4.5em;
+    
 }
 
 .video-principal{
@@ -103,6 +107,7 @@ video {
     height: 0;
     margin:10px auto;
 }
+
 .video iframe {
     position: absolute;
     top: 0;
@@ -111,4 +116,90 @@ video {
     height: 100%;
 }
 
+fieldset {
+    border: 1px rgb(235, 122, 61) solid;
+}
 
+.tabela-contato {
+    margin-bottom: 8px;
+}
+
+footer#rodape {
+	clear: both;
+    border-top: 1px solid rgb(235, 122, 61);
+    margin-top: 1em;
+}
+footer#rodape p {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+
+
+
+
+
+input[type=text], input[type=number], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+ 
+  input[type=submit] {
+    background-color: rgb(235, 122, 61);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  /* Floating column for labels: 30% width */
+  .col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 50% width */
+  .col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-30, .col-50, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+    .row {
+        margin-top: 11px;
+    }
+  }
