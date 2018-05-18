@@ -95,9 +95,6 @@ video {
     margin: 15px 0px;
     width: 100%;
     max-height: 400px;
-/*    background-image: url("../images/bannerMarktClub.jpg"); >>---> caso banner fosse utilizado como background.
-    background-repeat: no-repeat;
-    background-position: center;*/
 }
 
 .noticias-grid{
@@ -240,6 +237,17 @@ input[type=text], input[type=number], textarea{
         height: 0;
         margin:1em auto;
     }
+
+    #slider {
+        height: 330px;
+    }
+    .images{
+        height:330px;
+    }
+    .content-txt {
+        top: 230px;
+    }
+
   }
 
   /* Transforma coluna em 100% para dispositivos < 600px */
@@ -270,9 +278,19 @@ input[type=text], input[type=number], textarea{
         height: 0;
         margin:1em auto;
     }
+
+    #slider {
+        height: 300px;
+    }
+    .images{
+        height:300px;
+    }
+    .content-txt {
+        top: 200px;
+    }
+    .legend {
+        border: 250px solid transparent;
+        border-left: 400px solid rgba(52, 73, 94, .3);
+        border-bottom: 0;}
+    
   }
-
-
-
-
-  
