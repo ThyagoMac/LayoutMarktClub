@@ -8,8 +8,10 @@ body, figure {
 
 figure { 
     width: 100%; 
-    min-width: 320px; 
+    min-width: 20%;
     margin:0 auto;
+    padding: 0;
+    border: 0;
 }
 
 video {
@@ -29,8 +31,7 @@ video {
     color: rgb(102, 102, 102);
 }
 
-.menu li:hover,
-.menu li:focus {
+.menu li:hover {
     background-color: rgba(235, 122, 61, 0.1);
 }
 
@@ -46,6 +47,7 @@ video {
     height: 40px;
     line-height: 40px;
     top: 0;
+    position: -webkit-sticky; /* Safari */
     position: sticky;
 }
 
@@ -58,8 +60,8 @@ video {
 
 .menu-int li {
     display: inline-block;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
+    margin-left: 0.23em;
+    margin-right: 0.23em;
 }
 
 .menu-int li a, #rodape a {
@@ -91,10 +93,18 @@ video {
 
 .banner-principal {
     margin: 15px 0px;
-    height: 400px;
-    background-image: url("../images/bannerMarktClub.jpg");
+    width: 100%;
+    max-height: 400px;
+/*    background-image: url("../images/bannerMarktClub.jpg"); >>---> caso banner fosse utilizado como background.
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
+}
+
+.noticias-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
 }
 
 .foto-noticia img {
@@ -104,21 +114,23 @@ video {
 .foto-noticia p, #f-contato label {
     font-weight: bold;
 }
-.foto-noticia p {
-    margin-bottom: 4.5em;
-    
-}
 
 .video-principal{
+    float: left;
+    width: 65.5%;
+}
 
+.video-secundario{
+    float: right;
+    width: 31%;
 }
 
 .video {
     position: relative;
-    padding-bottom: 56.25%; 
-    padding-top: 25px;
+    padding-bottom: 16%;
+    padding-top: 0;
     height: 0;
-    margin:10px auto;
+    margin: 1em auto;
 }
 
 .video iframe {
@@ -131,6 +143,7 @@ video {
 
 fieldset {
     border: 1px rgb(235, 122, 61) solid;
+    margin: 1em;
 }
 
 .tabela-contato {
@@ -141,16 +154,19 @@ footer#rodape {
 	clear: both;
     border-top: 1px solid rgb(235, 122, 61);
     margin-top: 1em;
+    background-color: rgba(102, 102, 102, 0.6);
 }
 footer#rodape p {
+    font-weight: bold;
+    color: fff;
     text-align: center;
     font-size: 0.7em;
+    padding: 1em;
+    margin: 0;
 }
-
-
-
-
-
+#rodape a {
+    color: fff;
+}
 
 input[type=text], input[type=number], textarea{
     width: 100%;
@@ -170,58 +186,93 @@ input[type=text], input[type=number], textarea{
     cursor: pointer;
     float: right;
   }
-  
-  /* Floating column for labels: 25% width */
+    
+  /* Coluna de videos */
+  .col-vids {
+    float: left;
+    width: 31%;
+  }
+
+  /* Coluna de 25% width */
   .col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
   }
 
-  /* Floating column for labels: 30% width */
-  .col-30 {
-    float: left;
-    width: 30%;
-    margin-top: 6px;
-  }
-  
-  /* Floating column for inputs: 50% width */
-  .col-50 {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-  }
-
-  /* Floating column for inputs: 75% width */
+  /* Coluna de 75% width */
   .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
   }
-  
-  /* Clear floats after the columns */
+
+  /* Reseta config dps da coluna */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-30, .col-50, .col-75, input[type=submit] {
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Transforma coluna em 100% para dispositivos < 980px */
+  @media screen and (max-width: 980px) {
+    .col-vids {
+      width: 47.5%;
+    }
+    .video-principal{
+        width: 100%;
+        float: none;
+    }
+    
+    .video-secundario{
+        width: 100%;
+        float: none;
+    }
+    .video {
+        position: relative;
+        padding-bottom: 56.25%; 
+        padding-top: 25px;
+        height: 0;
+        margin:1em auto;
+    }
+  }
+
+  /* Transforma coluna em 100% para dispositivos < 600px */
+  @media screen and (max-width: 650px) {
+    .col-25, .col-vids, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
     }
+    .col-vids{
+    margin: 0 0 3em 0;
+    }
     .row {
         margin-top: 11px;
+    }
+    .video-principal{
+        width: 100%;
+        float: none;
+    }
+    
+    .video-secundario{
+        width: 100%;
+        float: none;
+    }
+    .video {
+        position: relative;
+        padding-bottom: 56.25%; 
+        padding-top: 25px;
+        height: 0;
+        margin:1em auto;
     }
   }
 
 
 
 
- 
- 
- 
- 
-
+  
